@@ -330,9 +330,6 @@ body{
         width: 70%;
         margin: 1em 3%;
     }
-    .basket, .back{
-        left: 0.3em;
-    }
     .basket_item{
         width: 100%;
         flex-direction: column;
