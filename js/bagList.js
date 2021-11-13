@@ -5,7 +5,7 @@ async function showBasket() {
     document.querySelector('.back').style.display = 'block';
     document.querySelector('.basket').style.display = 'none'
     let basketList = JSON.parse(localStorage.getItem('order'))
-    if (basketList.length) {
+    if (basketList) {
         basketList.forEach(elem => {
             let bs = dataListe.map(item => {
                 if (item.id.number == elem) {

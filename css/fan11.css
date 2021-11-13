@@ -77,9 +77,18 @@ body{
     overflow: hidden;
     align-content: stretch;
     color: rgb(221, 221, 221);
-    box-shadow: 5px 5px 10px #fff;
+    box-shadow: 5px 5px 5px rgb(218, 218, 218);
     z-index: 1;
     border-radius: 0.2em;
+    transition: .3s;
+}
+.item:hover{
+    background-color: rgb(219, 219, 219);
+    color: rgb(49, 49, 49);
+}
+.item:hover .item_buttom{
+    background-color: rgb(37, 37, 37);
+    color: #fff;
 }
 .item_header{
     margin: 1em 0;
