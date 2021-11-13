@@ -5,7 +5,7 @@ async function showBasket() {
     document.querySelector('.back').style.display = 'block';
     document.querySelector('.basket').style.display = 'none'
     let basketList = JSON.parse(localStorage.getItem('order'))
-    if (basketList) {
+    if (basketList[0]) {
         basketList.forEach(elem => {
             let bs = dataListe.map(item => {
                 if (item.id.number == elem) {
@@ -34,6 +34,7 @@ async function showBasket() {
         basketPoor.innerHTML = 'Basket is poor';
         shopList.appendChild(basketPoor)
     }
+    console.log(basketList[0]);
 }
 //
 //Clear function for deler BasketRemove
