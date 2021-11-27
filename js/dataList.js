@@ -1,3 +1,9 @@
+const valuteValue = {
+    'rub': 1,
+    'usd': 75,
+    'euro': 84
+}
+
 const dataListe = [
     item = {
         id: {

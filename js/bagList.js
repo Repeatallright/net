@@ -1,6 +1,7 @@
 
 //Fill the basket main with basket elements
 async function showBasket() {
+    bascketActive = true;
     shopList.innerHTML = '';
     document.querySelector('.back').style.display = 'block';
     document.querySelector('.basket').style.display = 'none'

@@ -12,10 +12,10 @@ class Fill {
             let elClass = `${this.item.body[key]}`;
             if (key == 'price') {
                 if (localStorage.getItem('valute') == 'usd') {
-                    elClass = Math.floor(elClass / 75)
+                    elClass = Math.floor(elClass / valuteValue['usd'])
                 }
                 if (localStorage.getItem('valute') == 'euro') {
-                    elClass = Math.floor(elClass / 82)
+                    elClass = Math.floor(elClass / valuteValue['euro'])
                 }
             }
             console.log();

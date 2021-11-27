@@ -29,6 +29,13 @@ async function showValute() {
 
         })
     }
+    if (bascketActive) {
+        showBasket()
+    }
+    else if (!bascketActive) {
+        fillMain(count)
+    }
 
 }
 showValute()
+

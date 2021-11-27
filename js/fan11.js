@@ -1,5 +1,5 @@
 window.scrollTo(0, 0)
-
+let bascketActive = false;
 let shopList = document.querySelector('.shopListItems');
 let count = 1;
 let back = document.querySelector('.back').addEventListener('click', () => {
@@ -19,7 +19,7 @@ class CreateList {
         this.item = item
     }
     //Create function
-    create() {
+    async create() {
         let div = document.createElement('div');
         div.classList.add('item');
         div.id = this.item.id.number;
@@ -27,10 +27,10 @@ class CreateList {
             let itemClass = this.item.body[key];
             if (key == 'price') {
                 if (localStorage.getItem('valute') == 'usd') {
-                    itemClass = Math.floor(itemClass / 75)
+                    itemClass = Math.floor(itemClass / valuteValue['usd'])
                 }
                 if (localStorage.getItem('valute') == 'euro') {
-                    itemClass = Math.floor(itemClass / 82)
+                    itemClass = Math.floor(itemClass / valuteValue['euro'])
                 }
             }
             let el = document.createElement('div');
@@ -50,6 +50,7 @@ class CreateList {
 //Fill main
 
 function fillMain(count) {
+    bascketActive = false
     shopList.innerHTML = ''
     for (let i = (9 * (count - 1)); i < (9 * count); i++) {
         if (dataListe[i]) {
