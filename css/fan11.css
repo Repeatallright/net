@@ -17,6 +17,7 @@ body{
     flex-direction: row-reverse;
     font-size: 2em;
     margin-bottom: 5em;
+    align-items: center;
 }
 .header_text{
     color: rgb(255, 255, 255);
@@ -79,7 +80,7 @@ body{
     overflow: hidden;
     align-content: stretch;
     color: rgb(221, 221, 221);
-    box-shadow: 5px 5px 5px rgb(218, 218, 218);
+    box-shadow: 2px 2px 1px rgb(218, 218, 218);
     z-index: 1;
     border-radius: 0.2em;
     transition: .3s;
@@ -88,10 +89,7 @@ body{
     background-color: rgb(219, 219, 219);
     color: rgb(49, 49, 49);
 }
-.item:hover .item_buttom{
-    background-color: rgb(37, 37, 37);
-    color: #fff;
-}
+
 .item_header{
     margin: 1em 0;
     width: 100%;
@@ -136,9 +134,11 @@ body{
     height: 3em;
     margin: 1em 0;
     user-select: none;
+    border: 1px solid rgb(49, 49, 49);
+
 }
 .item_buttom:hover{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
 }
 
@@ -245,6 +245,12 @@ body{
     color: #fff;
 }
 
+
+.valute{
+    position: relative;
+    top: 2px;
+}
+
 @media (max-width:1920px){
     body{
         font-size: 12px;
@@ -294,9 +300,14 @@ body{
     }
     .header{
         margin-bottom: 3em;
+        justify-content: space-between;
     }
     .basket, .back{
-        top: -0.2em;
+        top: 0.2em;
+        margin: 1em;
+    }
+    .valute{
+        margin: 1em;
     }
 }
 @media (max-width:550px){
@@ -312,7 +323,6 @@ body{
     }
     .basket, .back{
         font-size: 1em;
-        top: -0.2em;
     }
     .basket_item{
         width: 100%;

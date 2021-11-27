@@ -10,6 +10,14 @@ class Fill {
         item.id = this.item.id.number;
         for (let key in this.item.body) {
             let elClass = `${this.item.body[key]}`;
+            if (key == 'price') {
+                if (localStorage.getItem('valute') == 'usd') {
+                    elClass = Math.floor(elClass / 75)
+                }
+                if (localStorage.getItem('valute') == 'euro') {
+                    elClass = Math.floor(elClass / 82)
+                }
+            }
             console.log();
             key == 'buttom' ? elClass = 'Remove' : '';
             let el = document.createElement('div')

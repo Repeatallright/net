@@ -25,6 +25,14 @@ class CreateList {
         div.id = this.item.id.number;
         for (let key in this.item.body) {
             let itemClass = this.item.body[key];
+            if (key == 'price') {
+                if (localStorage.getItem('valute') == 'usd') {
+                    itemClass = Math.floor(itemClass / 75)
+                }
+                if (localStorage.getItem('valute') == 'euro') {
+                    itemClass = Math.floor(itemClass / 82)
+                }
+            }
             let el = document.createElement('div');
             el.classList.add(`item_${key}`)
             if (itemClass.length > 300) {
@@ -99,6 +107,5 @@ async function fillBr() {
     br.forEach(item => {
         item.classList.remove('border_el_acive')
     })
-    console.log(br);
     br[count - 1].classList.add('border_el_active')
 }
