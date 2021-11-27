@@ -27,11 +27,15 @@ class CreateList {
             let itemClass = this.item.body[key];
             if (key == 'price') {
                 if (localStorage.getItem('valute') == 'usd') {
-                    itemClass = Math.floor(itemClass / valuteValue['usd'])
+                    itemClass = `${Math.floor(itemClass / valuteValue['usd'])}$`
                 }
                 if (localStorage.getItem('valute') == 'euro') {
-                    itemClass = Math.floor(itemClass / valuteValue['euro'])
+                    itemClass = `${Math.floor(itemClass / valuteValue['euro'])}€`
                 }
+                if (localStorage.getItem('valute') == 'rub') {
+                    itemClass = `${Math.floor(itemClass / valuteValue['rub'])}₽`
+                }
+                
             }
             let el = document.createElement('div');
             el.classList.add(`item_${key}`)

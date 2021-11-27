@@ -25,7 +25,8 @@ async function showBasket() {
         let finalPrice = 0;
 
         basket_price.forEach(item => {
-            finalPrice += (+item.innerHTML);
+
+            finalPrice += (+item.innerHTML.slice(0, (item.innerHTML.length - 1)));
         })
         showFinalPrice(finalPrice)
     }

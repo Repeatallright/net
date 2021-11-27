@@ -9,13 +9,16 @@ class Fill {
         item.classList.add('basket_item');
         item.id = this.item.id.number;
         for (let key in this.item.body) {
-            let elClass = `${this.item.body[key]}`;
+            let elClass = this.item.body[key];
             if (key == 'price') {
                 if (localStorage.getItem('valute') == 'usd') {
-                    elClass = Math.floor(elClass / valuteValue['usd'])
+                    elClass = `${ Math.floor(elClass / valuteValue['usd'])}$`
                 }
                 if (localStorage.getItem('valute') == 'euro') {
-                    elClass = Math.floor(elClass / valuteValue['euro'])
+                    elClass = `${Math.floor(elClass / valuteValue['euro'])}€`
+                }
+                if (localStorage.getItem('valute') == 'rub') {
+                    elClass = `${Math.floor(elClass / valuteValue['rub'])}₽`
                 }
             }
             console.log();
