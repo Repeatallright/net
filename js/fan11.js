@@ -35,7 +35,7 @@ class CreateList {
                 if (localStorage.getItem('valute') == 'rub') {
                     itemClass = `${Math.floor(itemClass / valuteValue['rub'])}₽`
                 }
-                
+
             }
             let el = document.createElement('div');
             el.classList.add(`item_${key}`)
@@ -55,6 +55,7 @@ class CreateList {
 
 function fillMain(count) {
     bascketActive = false
+    shopList.style.flexDirection = 'row'
     shopList.innerHTML = ''
     for (let i = (9 * (count - 1)); i < (9 * count); i++) {
         if (dataListe[i]) {

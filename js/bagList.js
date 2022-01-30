@@ -3,6 +3,10 @@
 async function showBasket() {
     bascketActive = true;
     shopList.innerHTML = '';
+    shopList.style.flexDirection = 'column'
+    let table = document.createElement('table');
+    table.classList.add('table');
+    shopList.appendChild(table)
     document.querySelector('.back').style.display = 'block';
     document.querySelector('.basket').style.display = 'none'
     let basketList = JSON.parse(localStorage.getItem('order'))

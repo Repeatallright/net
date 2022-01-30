@@ -63,11 +63,10 @@ body{
 .shopListItems{
     display: flex;
     width: 80%;
-    align-items: stretchs;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    z-index: 1
-    ;
+    z-index: 1;
 }
 
 .item{
@@ -349,4 +348,16 @@ body{
     .header{
         margin-bottom: 2em;
     }
+}
+
+table{
+    border-collapse: collapse;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+td{
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
 }
