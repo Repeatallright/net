@@ -249,6 +249,18 @@ body{
     position: relative;
     top: 2px;
 }
+table{
+    border-collapse: collapse;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+td{
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
+}
 
 @media (max-width:1920px){
     body{
@@ -308,6 +320,12 @@ body{
     .valute{
         margin: 1em;
     }
+    td{
+        border: 1px solid rgb(255, 255, 255);
+        padding: 10px 20px;
+        text-align: center;
+        color: #fff;
+    }
 }
 @media (max-width:550px){
     body{
@@ -350,14 +368,3 @@ body{
     }
 }
 
-table{
-    border-collapse: collapse;
-    border: 2px solid #fff;
-    border-radius: 5px;
-}
-td{
-    border: 1px solid rgb(255, 255, 255);
-    padding: 10px 30px;
-    text-align: center;
-    color: #fff;
-}
